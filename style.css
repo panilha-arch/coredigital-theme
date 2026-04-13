@@ -242,12 +242,16 @@ nav.main-nav .cn { display: flex; justify-content: space-between; align-items: c
 /* ═══════════════ ABOUT ═══════════════ */
 .ab-lay { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
 .ab-vis {
-  aspect-ratio: 4/5; border-radius: 24px; overflow: hidden; background: var(--navy);
-  position: relative; display: flex; align-items: center; justify-content: center;
+  border-radius: 24px; overflow: hidden; background: var(--navy);
+  position: relative;
 }
-.ab-vis::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 35% 45%, rgba(125,193,66,.1), transparent 55%); }
-.ab-vis::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 80%, rgba(27,53,100,.3), transparent 55%); }
-.ab-vis img { height: 140px; width: auto; position: relative; z-index: 1; }
+.ab-vis::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 35% 45%, rgba(125,193,66,.1), transparent 55%); pointer-events: none; z-index: 1; }
+.ab-vis::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 80%, rgba(27,53,100,.3), transparent 55%); pointer-events: none; z-index: 1; }
+.ab-vis #sb_instagram, .ab-vis .sbi { position: relative; z-index: 2; }
+.ab-ig-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 28px; text-align: center; }
+.ab-ig-placeholder a { text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.ab-ig-placeholder p { font-size: 1.1rem; color: var(--white); font-weight: 500; }
+.ab-ig-placeholder span { font-size: .8rem; color: rgba(255,255,255,.3); }
 .ab-t h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.18; color: var(--dark); margin-bottom: 28px; }
 .ab-t p { font-size: 1rem; color: var(--g600); line-height: 1.8; margin-bottom: 20px; }
 .ab-v { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 40px; }

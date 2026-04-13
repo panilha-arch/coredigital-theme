@@ -23,7 +23,7 @@ function coredigital_scripts() {
     wp_enqueue_style('fraunces', 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap', array(), null);
 
     // Theme stylesheet
-wp_enqueue_style('coredigital-style', get_stylesheet_uri(), array(), '2.0');
+wp_enqueue_style('coredigital-style', get_stylesheet_uri(), array(), '2.2');
 
     // Theme scripts
     wp_enqueue_script('coredigital-scripts', get_template_directory_uri() . '/assets/js/main.js', array(), '2.1', true);
