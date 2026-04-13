@@ -11,18 +11,12 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: SFTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: wangyucode/sftp-upload-action@v2.0.4
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          host: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
           port: 22
-          local-dir: ./
-          server-dir: /wp-content/themes/coredigital-theme/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/node_modules/**
-            docker-compose.yml
-            README.md
+          localDir: ./
+          remoteDir: /wp-content/themes/coredigital-theme/
+          exclude: .git*,.github*,node_modules*,docker-compose.yml,README.md
