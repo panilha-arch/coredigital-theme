@@ -117,7 +117,7 @@ function coredigital_create_pages() {
               'desc' => 'Diagnóstico completo antes de qualquer investimento. Entendemos seu momento, analisamos o que existe e montamos o caminho mais curto até o resultado.'),
         array('title' => 'Shopping Centers', 'slug' => 'shopping-centers', 'template' => 'page-templates/service.php',
               'subtitle' => 'Marketing Digital',
-              'desc' => 'Campanhas sazonais, tráfego para lojistas, conteúdo institucional e gestão de redes sociais para grandes centros comerciais de Manaus.'),
+              'desc' => 'Campanhas sazonais, conteúdo institucional e gestão de redes sociais para grandes centros comerciais de Manaus.'),
         array('title' => 'Saúde e Estética', 'slug' => 'saude-estetica', 'template' => 'page-templates/service.php',
               'subtitle' => 'Marketing Digital',
               'desc' => 'Posicionamento digital para médicos, clínicas e profissionais de saúde em Manaus. Conteúdo com autoridade e campanhas dentro das normas do CFM.'),

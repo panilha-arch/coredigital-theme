@@ -79,7 +79,7 @@
       <div class="seg-grid">
         <?php
         $segments = array(
-          array('title' => 'Shopping Centers', 'slug' => 'shopping-centers', 'desc' => 'Campanhas sazonais, tráfego para lojistas, conteúdo institucional e gestão de redes sociais para grandes centros comerciais de Manaus.'),
+          array('title' => 'Shopping Centers', 'slug' => 'shopping-centers', 'desc' => 'Campanhas sazonais, conteúdo institucional e gestão de redes sociais para grandes centros comerciais de Manaus.'),
           array('title' => 'Saúde e Estética', 'slug' => 'saude-estetica', 'desc' => 'Posicionamento digital para médicos, clínicas e profissionais de saúde. Conteúdo com autoridade e campanhas dentro das normas do CFM.'),
           array('title' => 'Varejo e Comércio', 'slug' => 'varejo', 'desc' => 'Tráfego pago para lojas físicas e e-commerce. Campanhas de conversão, remarketing e conteúdo para gerar vendas recorrentes.'),
           array('title' => 'Gastronomia', 'slug' => 'gastronomia', 'desc' => 'Gestão de redes sociais para restaurantes, bares e delivery. Conteúdo visual, promoções e campanhas de alcance local em Manaus.'),
