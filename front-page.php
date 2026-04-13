@@ -64,7 +64,7 @@
   <div class="stats" aria-label="Números da Core Digital">
     <div class="cn"><div class="stats-g">
       <div class="sb rv"><div class="sb-n" data-target="50" data-suffix="+">0</div><div class="sb-l">Marcas atendidas</div></div>
-      <div class="sb rv"><div class="sb-n" data-target="3" data-suffix="M+">0</div><div class="sb-l">Em mídia gerenciada</div></div>
+      <div class="sb rv"><div class="sb-n" data-target="500" data-suffix="mil+">0</div><div class="sb-l">Em mídia gerenciada</div></div>
       <div class="sb rv"><div class="sb-n" data-target="100" data-suffix="%">0</div><div class="sb-l">Foco em resultado</div></div>
       <div class="sb rv"><div class="sb-n" data-text="true">Manaus</div><div class="sb-l">Amazonas, Brasil</div></div>
     </div></div>
@@ -122,10 +122,26 @@
       <h2 class="st rv">Marcas que confiam<br>na Core Digital</h2>
       <p class="sd rv">Shopping centers, clínicas e negócios locais em Manaus e região Norte. Soluções sob medida para cada realidade.</p>
       <div class="cl-row">
-        <div class="cl rv"><h4>Shopping Ponta Negra</h4><span>Varejo &bull; Shopping Center</span></div>
-        <div class="cl rv"><h4>Shopping Manaus ViaNorte</h4><span>Varejo &bull; Shopping Center</span></div>
-        <div class="cl rv"><h4>Shopping Pátio Roraima</h4><span>Varejo &bull; Shopping Center</span></div>
-        <div class="cl rv"><h4>Dr. Euler Ribeiro Filho</h4><span>Saúde &bull; Cirurgia Plástica</span></div>
+        <div class="cl rv">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ponta-negra.png" alt="Shopping Ponta Negra" class="cl-logo">
+          <h4>Shopping Ponta Negra</h4>
+          <span>Varejo &bull; Shopping Center</span>
+        </div>
+        <div class="cl rv">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/vianorte.png" alt="Shopping Manaus ViaNorte" class="cl-logo">
+          <h4>Shopping Manaus ViaNorte</h4>
+          <span>Varejo &bull; Shopping Center</span>
+        </div>
+        <div class="cl rv">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/patio-roraima.png" alt="Shopping Pátio Roraima" class="cl-logo">
+          <h4>Shopping Pátio Roraima</h4>
+          <span>Varejo &bull; Shopping Center</span>
+        </div>
+        <div class="cl rv">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dr-euler.png" alt="Dr. Euler Ribeiro Filho" class="cl-logo">
+          <h4>Dr. Euler Ribeiro Filho</h4>
+          <span>Saúde &bull; Cirurgia Plástica</span>
+        </div>
       </div>
     </div>
   </section>

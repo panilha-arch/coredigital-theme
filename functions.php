@@ -26,7 +26,7 @@ function coredigital_scripts() {
 wp_enqueue_style('coredigital-style', get_stylesheet_uri(), array(), '2.0');
 
     // Theme scripts
-    wp_enqueue_script('coredigital-scripts', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0', true);
+    wp_enqueue_script('coredigital-scripts', get_template_directory_uri() . '/assets/js/main.js', array(), '2.1', true);
 }
 add_action('wp_enqueue_scripts', 'coredigital_scripts');
 
