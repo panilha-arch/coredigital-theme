@@ -20,10 +20,10 @@ add_action('after_setup_theme', 'coredigital_setup');
 function coredigital_scripts() {
     // Fonts
     wp_enqueue_style('satoshi-font', 'https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap', array(), null);
-    wp_enqueue_style('instrument-serif', 'https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap', array(), null);
+    wp_enqueue_style('fraunces', 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap', array(), null);
 
     // Theme stylesheet
-    wp_enqueue_style('coredigital-style', get_stylesheet_uri(), array('satoshi-font', 'instrument-serif'), '1.0');
+wp_enqueue_style('coredigital-style', get_stylesheet_uri(), array(), '2.0');
 
     // Theme scripts
     wp_enqueue_script('coredigital-scripts', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0', true);
