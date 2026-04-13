@@ -101,7 +101,7 @@
     <div class="cn"><div class="ab-lay">
       <div class="ab-vis rv">
         <?php if ( shortcode_exists( 'instagram-feed' ) ) : ?>
-          <?php echo do_shortcode('[instagram-feed feed=1]'); ?>
+          <?php echo do_shortcode('[instagram-feed feed=1 num=9 cols=3 showheader=false showfollow=false showbutton=false]'); ?>
         <?php else : ?>
           <div class="ab-ig-placeholder">
             <a href="https://www.instagram.com/coredigital.co/" target="_blank" rel="noopener noreferrer">
