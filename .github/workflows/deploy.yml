@@ -10,15 +10,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: SFTP Deploy
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          server-dir: /wp-content/themes/coredigital-theme/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            **/README.md
+          port: 22
+          local_path: './*'
+          remote_path: '/wp-content/themes/coredigital-theme/'
+          sftp_only: true
