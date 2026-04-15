@@ -3,7 +3,7 @@
     <div class="cn">
       <div class="ft">
         <div class="fb-brand">
-          <img src="<?php echo coredigital_logo_url(); ?>" alt="Core Digital">
+          <img src="<?php echo coredigital_logo_url(); ?>" alt="Core Digital" loading="lazy" decoding="async" width="28" height="28">
           <p>Agência de publicidade em Manaus. Conteúdo estratégico, gestão de redes sociais e mídia de performance para marcas que querem resultado real.</p>
         </div>
         <div class="fc">

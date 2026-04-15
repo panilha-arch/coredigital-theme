@@ -99,7 +99,7 @@
   <!-- SOBRE -->
   <section id="sobre" class="lt sp" aria-label="Sobre a Core Digital">
     <div class="cn"><div class="ab-lay">
-      <div class="ab-vis rv"><img src="<?php echo coredigital_logo_vert_url(); ?>" alt="Core Digital"></div>
+      <div class="ab-vis rv"><img src="<?php echo coredigital_logo_vert_url(); ?>" alt="Core Digital" loading="lazy" decoding="async" width="140" height="140"></div>
       <div class="ab-t">
         <div class="ey rv">Sobre</div>
         <h2 class="rv">Uma agência de Manaus que entrega resultado, não PowerPoint bonito</h2>
@@ -123,22 +123,22 @@
       <p class="sd rv">Shopping centers, clínicas e negócios locais em Manaus e região Norte. Soluções sob medida para cada realidade.</p>
       <div class="cl-row">
         <div class="cl rv">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ponta-negra.png" alt="Shopping Ponta Negra" class="cl-logo">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/ponta-negra.png" alt="Shopping Ponta Negra" class="cl-logo" loading="lazy" decoding="async" width="120" height="60">
           <h4>Shopping Ponta Negra</h4>
           <span>Varejo &bull; Shopping Center</span>
         </div>
         <div class="cl rv">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/vianorte.png" alt="Shopping Manaus ViaNorte" class="cl-logo">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/vianorte.png" alt="Shopping Manaus ViaNorte" class="cl-logo" loading="lazy" decoding="async" width="120" height="60">
           <h4>Shopping Manaus ViaNorte</h4>
           <span>Varejo &bull; Shopping Center</span>
         </div>
         <div class="cl rv">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/patio-roraima.png" alt="Shopping Pátio Roraima" class="cl-logo">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/patio-roraima.png" alt="Shopping Pátio Roraima" class="cl-logo" loading="lazy" decoding="async" width="120" height="60">
           <h4>Shopping Pátio Roraima</h4>
           <span>Varejo &bull; Shopping Center</span>
         </div>
         <div class="cl rv">
-          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dr-euler.png" alt="Dr. Euler Ribeiro Filho" class="cl-logo">
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/dr-euler.png" alt="Dr. Euler Ribeiro Filho" class="cl-logo" loading="lazy" decoding="async" width="120" height="60">
           <h4>Dr. Euler Ribeiro Filho</h4>
           <span>Saúde &bull; Cirurgia Plástica</span>
         </div>
