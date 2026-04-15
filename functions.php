@@ -23,7 +23,7 @@ function coredigital_scripts() {
     wp_enqueue_style('fraunces', 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700&display=swap', array(), null);
 
     // Theme stylesheet
-    wp_enqueue_style('coredigital-style', get_stylesheet_uri(), array(), '2.4');
+    wp_enqueue_style('coredigital-style', get_stylesheet_uri(), array(), '2.5');
 
     // Theme scripts
     wp_enqueue_script('coredigital-scripts', get_template_directory_uri() . '/assets/js/main.js', array(), '2.1', true);
@@ -214,10 +214,9 @@ function coredigital_schema_localbusiness() {
             'longitude' => -60.0096749,
         ),
         'areaServed' => array(
-            array('@type' => 'City', 'name' => 'Manaus'),
-            array('@type' => 'State', 'name' => 'Amazonas'),
-            array('@type' => 'State', 'name' => 'Roraima'),
-            array('@type' => 'AdministrativeArea', 'name' => 'Região Norte do Brasil'),
+            array('@type' => 'City', 'name' => 'Manaus', 'containedInPlace' => array('@type' => 'State', 'name' => 'Amazonas')),
+            array('@type' => 'City', 'name' => 'Boa Vista', 'containedInPlace' => array('@type' => 'State', 'name' => 'Roraima')),
+            array('@type' => 'City', 'name' => 'Porto Velho', 'containedInPlace' => array('@type' => 'State', 'name' => 'Rondônia')),
         ),
         'sameAs' => array(
             'https://www.instagram.com/coredigital.co/',
@@ -243,11 +242,42 @@ function coredigital_schema_localbusiness() {
     );
 }
 
+// ═══ READING TIME ═══
+function coredigital_reading_time($content) {
+    $words = str_word_count(strip_tags($content));
+    return max(1, ceil($words / 220));
+}
+
+// ═══ SERVE llms.txt NA RAIZ ═══
+function coredigital_llms_txt_rewrite() {
+    add_rewrite_rule('^llms\.txt$', 'index.php?coredigital_llms=1', 'top');
+}
+add_action('init', 'coredigital_llms_txt_rewrite');
+
+function coredigital_llms_txt_query_vars($vars) {
+    $vars[] = 'coredigital_llms';
+    return $vars;
+}
+add_filter('query_vars', 'coredigital_llms_txt_query_vars');
+
+function coredigital_llms_txt_serve() {
+    if (get_query_var('coredigital_llms')) {
+        $file = get_template_directory() . '/llms.txt';
+        if (file_exists($file)) {
+            header('Content-Type: text/plain; charset=utf-8');
+            header('X-Robots-Tag: all');
+            readfile($file);
+            exit;
+        }
+    }
+}
+add_action('template_redirect', 'coredigital_llms_txt_serve');
+
 // ═══ SCHEMA.ORG FAQPAGE ═══
 function coredigital_schema_faq() {
     $faqs = array(
         array('q' => 'Qual o investimento mínimo em tráfego pago?', 'a' => 'Depende do objetivo e do segmento. Trabalhamos com orçamentos acessíveis para pequenos e médios negócios em Manaus. Na primeira conversa, definimos juntos o valor que faz sentido.'),
-        array('q' => 'Vocês atendem fora de Manaus?', 'a' => 'Sim. Foco em Manaus e região Norte, mas já atendemos Roraima e outras localidades. Gestão de tráfego e conteúdo funcionam bem de forma remota.'),
+        array('q' => 'Vocês atendem fora de Manaus?', 'a' => 'Sim. Atendemos Manaus (AM), Boa Vista (RR) e Porto Velho (RO). Gestão de tráfego e conteúdo funcionam bem de forma remota.'),
         array('q' => 'Qual a diferença entre gestão de redes e tráfego pago?', 'a' => 'Redes sociais cuida do orgânico: posts, stories, editorial. Tráfego pago são campanhas em Meta Ads e Google Ads para alcançar mais gente e converter. Os dois se complementam.'),
         array('q' => 'Em quanto tempo vejo resultado?', 'a' => 'Tráfego pago gera resultado na primeira semana. Posicionamento e conteúdo levam 60 a 90 dias para consolidar. Somos transparentes com prazos desde o primeiro dia.'),
         array('q' => 'Vocês fazem gestão de Instagram?', 'a' => 'Sim. Planejamento editorial completo, criação de conteúdo (Reels, carrosséis, stories), legendas estratégicas e gestão diária. Tudo alinhado com a identidade da marca.'),

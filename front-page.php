@@ -170,7 +170,7 @@
         <?php
         $faqs = array(
           array('q' => 'Qual o investimento mínimo em tráfego pago?', 'a' => 'Depende do objetivo e do segmento. Trabalhamos com orçamentos acessíveis para pequenos e médios negócios em Manaus. Na primeira conversa, definimos juntos o valor que faz sentido.'),
-          array('q' => 'Vocês atendem fora de Manaus?', 'a' => 'Sim. Foco em Manaus e região Norte, mas já atendemos Roraima e outras localidades. Gestão de tráfego e conteúdo funcionam bem de forma remota.'),
+          array('q' => 'Vocês atendem fora de Manaus?', 'a' => 'Sim. Atendemos Manaus (AM), Boa Vista (RR) e Porto Velho (RO). Gestão de tráfego e conteúdo funcionam bem de forma remota.'),
           array('q' => 'Qual a diferença entre gestão de redes e tráfego pago?', 'a' => 'Redes sociais cuida do orgânico: posts, stories, editorial. Tráfego pago são campanhas em Meta Ads e Google Ads para alcançar mais gente e converter. Os dois se complementam.'),
           array('q' => 'Em quanto tempo vejo resultado?', 'a' => 'Tráfego pago gera resultado na primeira semana. Posicionamento e conteúdo levam 60 a 90 dias para consolidar. Somos transparentes com prazos desde o primeiro dia.'),
           array('q' => 'Vocês fazem gestão de Instagram?', 'a' => 'Sim. Planejamento editorial completo, criação de conteúdo (Reels, carrosséis, stories), legendas estratégicas e gestão diária. Tudo alinhado com a identidade da marca.'),
