@@ -242,22 +242,42 @@ nav.main-nav .cn { display: flex; justify-content: space-between; align-items: c
 /* ═══════════════ ABOUT ═══════════════ */
 .ab-lay { display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: center; }
 .ab-vis {
-  border-radius: 24px; overflow: hidden; background: var(--navy);
-  position: relative;
+  aspect-ratio: 4/5; border-radius: 24px; overflow: hidden; background: var(--navy);
+  position: relative; display: flex; align-items: center; justify-content: center;
 }
-.ab-vis::before { display: none; }
-.ab-vis::after { display: none; }
-.ab-vis #sb_instagram, .ab-vis .sbi { position: relative; z-index: 2; }
-.ab-vis #sb_instagram { padding: 0 !important; }
-.ab-vis .sb_instagram_header { display: none !important; }
-.ab-vis .sbi_follow_btn { display: none !important; }
-.ab-vis .sbi_load_btn { display: none !important; }
-.ab-vis #sbi_images { padding: 0 !important; gap: 3px !important; }
-.ab-vis .sbi_item { margin: 0 !important; padding: 0 !important; }
-.ab-ig-placeholder { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 80px 28px; text-align: center; }
-.ab-ig-placeholder a { text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.ab-ig-placeholder p { font-size: 1.1rem; color: var(--white); font-weight: 500; }
-.ab-ig-placeholder span { font-size: .8rem; color: rgba(255,255,255,.3); }
+.ab-vis::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 35% 45%, rgba(125,193,66,.1), transparent 55%); }
+.ab-vis::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 80%, rgba(27,53,100,.3), transparent 55%); }
+.ab-vis img { height: 140px; width: auto; position: relative; z-index: 1; }
+
+/* ═══════════════ INSTAGRAM FEED SECTION ═══════════════ */
+.ig-section { padding: 120px 0 140px; background: var(--deep); position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,.04); border-bottom: 1px solid rgba(255,255,255,.04); }
+.ig-section::before { content: ''; position: absolute; top: -20%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(125,193,66,.06), transparent 70%); filter: blur(80px); pointer-events: none; }
+.ig-top { display: flex; justify-content: space-between; align-items: flex-end; gap: 40px; margin-bottom: 56px; position: relative; }
+.ig-top h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 3.4rem); font-weight: 400; line-height: 1.1; letter-spacing: -.01em; color: var(--white); }
+.ig-top h2 span { color: var(--green); font-style: italic; }
+.ig-handle-link {
+  display: inline-flex; align-items: center; gap: 10px; text-decoration: none;
+  color: var(--white); font-size: .85rem; font-weight: 600; letter-spacing: .04em;
+  padding: 14px 24px; border: 1px solid rgba(255,255,255,.1); border-radius: 100px;
+  transition: all .35s; background: rgba(255,255,255,.02); white-space: nowrap;
+}
+.ig-handle-link:hover { border-color: var(--green); color: var(--green); transform: translateY(-2px); }
+.ig-handle-link svg { transition: transform .3s; }
+.ig-handle-link:hover svg { transform: translate(3px, -3px); }
+.ig-feed-wrap { position: relative; }
+.ig-feed-wrap #sb_instagram { padding: 0 !important; max-width: 100% !important; }
+.ig-feed-wrap .sb_instagram_header { display: none !important; }
+.ig-feed-wrap .sbi_follow_btn { display: none !important; }
+.ig-feed-wrap .sbi_load_btn { display: none !important; }
+.ig-feed-wrap #sbi_images { padding: 0 !important; gap: 16px !important; }
+.ig-feed-wrap .sbi_item { margin: 0 !important; padding: 0 !important; border-radius: 12px; overflow: hidden; transition: transform .45s cubic-bezier(.16,1,.3,1); }
+.ig-feed-wrap .sbi_item:hover { transform: translateY(-6px); }
+.ig-feed-empty { padding: 80px 40px; text-align: center; color: rgba(255,255,255,.3); font-size: .9rem; border: 1px dashed rgba(255,255,255,.08); border-radius: 16px; }
+@media (max-width: 768px) {
+  .ig-section { padding: 80px 0; }
+  .ig-top { flex-direction: column; align-items: flex-start; }
+  .ig-feed-wrap #sbi_images { gap: 8px !important; }
+}
 .ab-t h2 { font-family: var(--serif); font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 400; line-height: 1.18; color: var(--dark); margin-bottom: 28px; }
 .ab-t p { font-size: 1rem; color: var(--g600); line-height: 1.8; margin-bottom: 20px; }
 .ab-v { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 40px; }

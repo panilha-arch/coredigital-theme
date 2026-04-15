@@ -99,19 +99,7 @@
   <!-- SOBRE -->
   <section id="sobre" class="lt sp" aria-label="Sobre a Core Digital">
     <div class="cn"><div class="ab-lay">
-      <div class="ab-vis rv">
-        <?php if ( shortcode_exists( 'instagram-feed' ) ) : ?>
-          <?php echo do_shortcode('[instagram-feed feed=1 num=9 cols=3 showheader=false showfollow=false showbutton=false]'); ?>
-        <?php else : ?>
-          <div class="ab-ig-placeholder">
-            <a href="https://www.instagram.com/coredigital.co/" target="_blank" rel="noopener noreferrer">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.4)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="rgba(255,255,255,.4)" stroke="none"/></svg>
-              <p>@coredigital.co</p>
-              <span>Ative o plugin Instagram Feed para exibir os posts aqui</span>
-            </a>
-          </div>
-        <?php endif; ?>
-      </div>
+      <div class="ab-vis rv"><img src="<?php echo coredigital_logo_vert_url(); ?>" alt="Core Digital"></div>
       <div class="ab-t">
         <div class="ey rv">Sobre</div>
         <h2 class="rv">Uma agência de Manaus que entrega resultado, não PowerPoint bonito</h2>
@@ -194,6 +182,29 @@
           <div class="fa"><p><?php echo $faq['a']; ?></p></div>
         </div>
         <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSTAGRAM -->
+  <section class="ig-section" id="instagram" aria-label="Instagram da Core Digital">
+    <div class="cn">
+      <div class="ig-top">
+        <div>
+          <div class="ey rv">Instagram</div>
+          <h2 class="rv">O que estamos<br>fazendo <span>por aí</span></h2>
+        </div>
+        <a href="https://www.instagram.com/coredigital.co/" class="ig-handle-link rv" target="_blank" rel="noopener noreferrer">
+          @coredigital.co
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+        </a>
+      </div>
+      <div class="ig-feed-wrap rv">
+        <?php if ( shortcode_exists( 'instagram-feed' ) ) : ?>
+          <?php echo do_shortcode('[instagram-feed num=6 cols=6 showheader=false showfollow=false showbutton=false]'); ?>
+        <?php else : ?>
+          <div class="ig-feed-empty">Conecte o plugin Instagram Feed para exibir os últimos posts aqui.</div>
+        <?php endif; ?>
       </div>
     </div>
   </section>
