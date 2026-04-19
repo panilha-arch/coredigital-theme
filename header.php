@@ -54,6 +54,26 @@
     gtag('config', 'G-P4ZKHVL2B7');
   </script>
 
+  <!-- Lead tracking (WhatsApp / e-mail / telefone) -->
+  <script>
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+      var href = link.getAttribute('href') || '';
+      var method = null;
+      if (href.indexOf('wa.me') !== -1 || href.indexOf('api.whatsapp.com') !== -1) method = 'whatsapp';
+      else if (href.indexOf('mailto:') === 0) method = 'email';
+      else if (href.indexOf('tel:') === 0) method = 'phone';
+      if (!method || typeof gtag !== 'function') return;
+      gtag('event', 'generate_lead', {
+        method: method,
+        link_url: href,
+        link_text: (link.innerText || '').trim().slice(0, 60),
+        link_location: link.closest('nav') ? 'nav' : (link.closest('footer') ? 'footer' : 'body')
+      });
+    }, true);
+  </script>
+
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
