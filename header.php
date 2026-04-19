@@ -45,6 +45,15 @@
   </script>
   <?php endif; ?>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4ZKHVL2B7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P4ZKHVL2B7');
+  </script>
+
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
